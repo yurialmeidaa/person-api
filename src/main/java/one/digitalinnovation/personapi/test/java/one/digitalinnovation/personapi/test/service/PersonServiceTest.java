@@ -31,11 +31,8 @@ public class PersonServiceTest {
      PersonDTO personDTO = PersonUtils.createFakeDTO();
     Person expectedSavedPerson = createFakeEntity();
 
-
        when(personRepository.save(any(Person.class))).thenReturn(expectedSavedPerson);
-
-
-
+       //commit
   personService.createPerson(personDTO);
 
         MessageResponseDTO expectedSuccessMessage = createExpectedSuccessMessage(expectedSavedPerson.getId());
