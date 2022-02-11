@@ -28,7 +28,7 @@ public class PersonService {
         Person personToSave = personMapper.toModel(personDTO);
 
         Person savedPerson =  personRepository.save(personToSave);
-        return  createMessageResponse(savedPerson.getId(), "Create person with ID ");
+        return  createMessageResponse(savedPerson.getId(), "Person successfully created with ID ");
     }
 
     public List<PersonDTO> listAll() {
